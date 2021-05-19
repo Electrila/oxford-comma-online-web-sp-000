@@ -6,9 +6,9 @@ def oxford_comma(array)
     array_string << array.join(" and ")
   else
     last_item = array.last
-    array.pop!
-    array_string << array_without_last_item.join(", ")
-    array_string << last_item.join(" and ")
+    array = array.pop
+    array_string << array.join(", ")
+    array_string << " and " << last_item
   end
   array_string
 end
