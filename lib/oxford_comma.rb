@@ -5,8 +5,8 @@ def oxford_comma(array)
   elsif array.length == 2
     array_string << array.join(" and ")
   else
-    last_item = array[-1]
-    array_without_last_item = array.pop
+    last_item = array.pop
+    array.pop!
     array_string << array_without_last_item.join(", ")
     array_string << last_item.join(" and ")
   end
